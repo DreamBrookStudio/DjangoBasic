@@ -17,7 +17,7 @@ development (Windows)
 
 # deployment
 [Python Anywhere](https://help.pythonanywhere.com/pages/DeployExistingDjangoProject/) (Linux)
-1. clone git repo
+1. clone git repo `git clone https://github.com/DreamBrookStudio/DjangoBasic.git`
    1. ideally requirements.txt is included
 2. create the virtual environment
 3. `mkvirtualenv --python=/usr/bin/python3.8 mysite-virtualenv`
@@ -28,13 +28,17 @@ development (Windows)
    3. enter path to code
    4. edit WSGI file
       1. set path variable: `path = '/home/myusername/mysite'`
-      2. point to correct settings.py file  `os.environ['DJANGO_SETTINGS_MODULE'] = 'mysite.settings'`
-6. edit settings file if there isn't a seperate deployment settings
+      2. point to correct settings file  `os.environ['DJANGO_SETTINGS_MODULE'] = 'mysite.settings'`
+6. edit manage.py to point to correct settings file
+   1. `os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mysite.settings_pythonanywhere')`
+7. edit settings file if there isn't a seperate deployment settings
    1. add domain `ALLOWED_HOSTS = ['myusername.pythonanywhere.com',]`
    2. add pointer to static directory (populated by `python manage.py collectstatic`) `STATIC_ROOT = '~/.../static'`
-7. set up database: `./manage.py migrate`
-8. load to check if worked so far
-9. `./manage.py collectstatic`
+8. set up database: `python manage.py migrate`
+9. load to check if worked so far
+10. add admin user
+11. `python manage.py collectstatic`
+    1. reload
 
 
 
