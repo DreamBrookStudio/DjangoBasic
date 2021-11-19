@@ -4,5 +4,7 @@ from . import views
 
 app_name = 'pokemon_letter'
 urlpatterns = [
-    path('<int:pk>/', views.SelectView.as_view(), name='select')
+    path('', views.index, name='index'),
+    path('<int:pokemon_id>/', views.select, name='select'),
+    path('random_pokemon/', views.random_pokemon, name='random_pokemon'),
 ]

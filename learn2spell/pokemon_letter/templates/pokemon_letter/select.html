@@ -1,0 +1,16 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'pokemon_letter/style.css' %}">
+
+<img src="{{pokemon.image.url}}">
+
+{% for letter in letters %}
+{% if letter == pokemon.name.0 %}
+<a class="letter" href="{% url 'pokemon_letter:random_pokemon' %}"> {{letter}} </a>
+{% else %}
+<p class="letter" %}"> {{letter}} </p>
+
+{% endif %}
+<br>
+<br>
+{%endfor %}
