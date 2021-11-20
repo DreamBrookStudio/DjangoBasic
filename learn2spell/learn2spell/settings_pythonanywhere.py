@@ -30,7 +30,7 @@ ALLOWED_HOSTS = ['dreambrookstudio.pythonanywhere.com',]
 # Application definition
 
 INSTALLED_APPS = [
-    'polls.apps.PollsConfig',
+    'pokemon_letter.apps.PokemonLetterConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
