@@ -119,7 +119,7 @@ USE_TZ = True
 STATIC_ROOT = '/home/dreambrookstudio/mysite/DjangoBasic/polls_tutorial/static'
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
-MEDIA_ROOT = '/home/dreambrookstudio/mysite/DjangoBasic/polls_tutorial/static'
+MEDIA_ROOT = '/home/dreambrookstudio/mysite/DjangoBasic/polls_tutorial/media'
 
 
 # Default primary key field type
