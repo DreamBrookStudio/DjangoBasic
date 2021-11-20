@@ -15,8 +15,13 @@ def random_pokemon(request):
     pokemon = Pokemon.objects.get(pk=choice(pks))
     return HttpResponseRedirect(reverse('pokemon_letter:select', args=(pokemon.id,)))
 
+def next_pokemon(request, pokemon_id):
+    next_id = pokemon_id + 1
+    if next_id > len(Pokemon.objects.values_list('pk', flat=True)):
+        next_id = 1
+    return HttpResponseRedirect(reverse('pokemon_letter:select', args=(next_id,)))
+
 def index(request):
-    pks = Pokemon.objects.values_list('pk', flat=True)
     return render(request, 'pokemon_letter/index.html')
 
 def select(request, pokemon_id):

@@ -10,14 +10,14 @@
 <tr style="height: 150x;">
 <td style="width: 150px; height: 150px;">
     {% if letters.0 == pokemon.name.0 %}
-        <a href="{% url 'pokemon_letter:random_pokemon' %}"> {{letters.0}} </a>
+        <a href="{% url 'pokemon_letter:next_pokemon' pokemon.id %}"> {{letters.0}} </a>
     {% else %}
         <p> {{letters.0}} </p>
     {% endif %}
 </td>
 <td style="width: 150px; height: 150px;">
     {% if letters.1 == pokemon.name.0 %}
-        <a href="{% url 'pokemon_letter:random_pokemon' %}"> {{letters.1}} </a>
+        <a href="{% url 'pokemon_letter:next_pokemon' pokemon.id %}"> {{letters.1}} </a>
     {% else %}
         <p> {{letters.1}} </p>
     {% endif %}
@@ -26,14 +26,14 @@
 <tr style="height: 150x;">
 <td style="width: 150px; height: 150px;">
     {% if letters.2 == pokemon.name.0 %}
-        <a href="{% url 'pokemon_letter:random_pokemon' %}"> {{letters.2}} </a>
+        <a href="{% url 'pokemon_letter:next_pokemon' pokemon.id %}"> {{letters.2}} </a>
     {% else %}
         <p> {{letters.2}} </p>
     {% endif %}
 </td>
 <td style="width: 150px; height: 150px;">
     {% if letters.3 == pokemon.name.0 %}
-        <a href="{% url 'pokemon_letter:random_pokemon' %}"> {{letters.3}} </a>
+        <a href="{% url 'pokemon_letter:next_pokemon' pokemon.id %}"> {{letters.3}} </a>
     {% else %}
         <p> {{letters.3}} </p>
     {% endif %}
@@ -42,14 +42,14 @@
 <tr style="height: 150x;">
 <td style="width: 150px; height: 150px;">
     {% if letters.4 == pokemon.name.0 %}
-        <a href="{% url 'pokemon_letter:random_pokemon' %}"> {{letters.4}} </a>
+        <a href="{% url 'pokemon_letter:next_pokemon' pokemon.id %}"> {{letters.4}} </a>
     {% else %}
         <p> {{letters.4}} </p>
     {% endif %}
 </td>
 <td style="width: 150px; height: 150px;">
     {% if letters.5 == pokemon.name.0 %}
-        <a href="{% url 'pokemon_letter:random_pokemon' %}"> {{letters.5}} </a>
+        <a href="{% url 'pokemon_letter:next_pokemon' pokemon.id %}"> {{letters.5}} </a>
     {% else %}
         <p %}"> {{letters.5}} </p>
     {% endif %}
