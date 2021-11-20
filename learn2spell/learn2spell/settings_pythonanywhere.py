@@ -116,10 +116,10 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
-STATIC_ROOT = '/home/dreambrookstudio/mysite/DjangoBasic/polls_tutorial/static'
+STATIC_ROOT = '/home/dreambrookstudio/mysite/DjangoBasic/learn2spell/static'
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
-MEDIA_ROOT = '/home/dreambrookstudio/mysite/DjangoBasic/polls_tutorial/media'
+MEDIA_ROOT = '/home/dreambrookstudio/mysite/DjangoBasic/learn2spell/media'
 
 
 # Default primary key field type
