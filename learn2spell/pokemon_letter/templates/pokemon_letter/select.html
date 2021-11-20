@@ -2,15 +2,62 @@
 
 <link rel="stylesheet" type="text/css" href="{% static 'pokemon_letter/style.css' %}">
 
-<img src="{{pokemon.image.url}}">
-
-{% for letter in letters %}
-{% if letter == pokemon.name.0 %}
-<a class="letter" href="{% url 'pokemon_letter:random_pokemon' %}"> {{letter}} </a>
-{% else %}
-<p class="letter" %}"> {{letter}} </p>
-
-{% endif %}
+<img class="center" src="{{pokemon.image.url}}" style="align:center">
 <br>
-<br>
-{%endfor %}
+
+<table class="center" style="width: 300px;">
+<tbody class="letter">
+<tr style="height: 150x;">
+<td style="width: 150px; height: 150px;">
+    {% if letters.0 == pokemon.name.0 %}
+        <a href="{% url 'pokemon_letter:random_pokemon' %}"> {{letters.0}} </a>
+    {% else %}
+        <p> {{letters.0}} </p>
+    {% endif %}
+</td>
+<td style="width: 150px; height: 150px;">
+    {% if letters.1 == pokemon.name.0 %}
+        <a href="{% url 'pokemon_letter:random_pokemon' %}"> {{letters.1}} </a>
+    {% else %}
+        <p> {{letters.1}} </p>
+    {% endif %}
+</td>
+</tr>
+<tr style="height: 150x;">
+<td style="width: 150px; height: 150px;">
+    {% if letters.2 == pokemon.name.0 %}
+        <a href="{% url 'pokemon_letter:random_pokemon' %}"> {{letters.2}} </a>
+    {% else %}
+        <p> {{letters.2}} </p>
+    {% endif %}
+</td>
+<td style="width: 150px; height: 150px;">
+    {% if letters.3 == pokemon.name.0 %}
+        <a href="{% url 'pokemon_letter:random_pokemon' %}"> {{letters.3}} </a>
+    {% else %}
+        <p> {{letters.3}} </p>
+    {% endif %}
+</td>
+</tr>
+<tr style="height: 150x;">
+<td style="width: 150px; height: 150px;">
+    {% if letters.4 == pokemon.name.0 %}
+        <a href="{% url 'pokemon_letter:random_pokemon' %}"> {{letters.4}} </a>
+    {% else %}
+        <p> {{letters.4}} </p>
+    {% endif %}
+</td>
+<td style="width: 150px; height: 150px;">
+    {% if letters.5 == pokemon.name.0 %}
+        <a href="{% url 'pokemon_letter:random_pokemon' %}"> {{letters.5}} </a>
+    {% else %}
+        <p %}"> {{letters.5}} </p>
+    {% endif %}
+</td>
+</tr>
+</tbody>
+</table>
+
+
+
+

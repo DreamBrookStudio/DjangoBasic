@@ -11,7 +11,7 @@ class Pokemon(models.Model):
         first = self.name[0]
         alphabet = list('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
         alphabet.remove(first)
-        letters = sample(alphabet,3) + [first]
+        letters = sample(alphabet,5) + [first]
         shuffle(letters)
         return letters
 
