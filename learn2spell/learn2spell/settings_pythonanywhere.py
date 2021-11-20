@@ -49,7 +49,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'mysite.urls'
+ROOT_URLCONF = 'learn2spell.urls'
 
 TEMPLATES = [
     {
@@ -67,7 +67,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'mysite.wsgi.application'
+WSGI_APPLICATION = 'learn2spell.wsgi.application'
 
 
 # Database
@@ -119,7 +119,7 @@ USE_TZ = True
 STATIC_ROOT = '/home/dreambrookstudio/mysite/DjangoBasic/polls_tutorial/static'
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
-MEDIA_ROOT = 'C:/Users/chris/Documents/Python Apps/DjangoBasic/learn2spell/media/'
+MEDIA_ROOT = '/home/dreambrookstudio/mysite/DjangoBasic/polls_tutorial/static'
 
 
 # Default primary key field type
