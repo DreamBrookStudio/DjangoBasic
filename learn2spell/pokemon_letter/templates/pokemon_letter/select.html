@@ -5,59 +5,14 @@
 <img class="center" src="{{pokemon.image.url}}" style="align:center">
 <br>
 
-<table class="center" style="width: 300px;">
-<tbody class="letter">
-<tr style="height: 150x;">
-<td style="width: 150px; height: 150px;">
-    {% if letters.0 == pokemon.name.0 %}
-        <a href="{% url 'pokemon_letter:next_pokemon' pokemon.id %}"> {{letters.0}} </a>
+<div class="outer-div">
+{% for letter in letters %}
+    <div class="inner-div">
+    {% if letter == pokemon.name.0 %}
+        <a href="{% url 'pokemon_letter:next_pokemon' pokemon.id %}" class="letterButton">{{letter}}</a>
     {% else %}
-        <p> {{letters.0}} </p>
+        <a href=# class="letterButton">{{letter}}</a>
     {% endif %}
-</td>
-<td style="width: 150px; height: 150px;">
-    {% if letters.1 == pokemon.name.0 %}
-        <a href="{% url 'pokemon_letter:next_pokemon' pokemon.id %}"> {{letters.1}} </a>
-    {% else %}
-        <p> {{letters.1}} </p>
-    {% endif %}
-</td>
-</tr>
-<tr style="height: 150x;">
-<td style="width: 150px; height: 150px;">
-    {% if letters.2 == pokemon.name.0 %}
-        <a href="{% url 'pokemon_letter:next_pokemon' pokemon.id %}"> {{letters.2}} </a>
-    {% else %}
-        <p> {{letters.2}} </p>
-    {% endif %}
-</td>
-<td style="width: 150px; height: 150px;">
-    {% if letters.3 == pokemon.name.0 %}
-        <a href="{% url 'pokemon_letter:next_pokemon' pokemon.id %}"> {{letters.3}} </a>
-    {% else %}
-        <p> {{letters.3}} </p>
-    {% endif %}
-</td>
-</tr>
-<tr style="height: 150x;">
-<td style="width: 150px; height: 150px;">
-    {% if letters.4 == pokemon.name.0 %}
-        <a href="{% url 'pokemon_letter:next_pokemon' pokemon.id %}"> {{letters.4}} </a>
-    {% else %}
-        <p> {{letters.4}} </p>
-    {% endif %}
-</td>
-<td style="width: 150px; height: 150px;">
-    {% if letters.5 == pokemon.name.0 %}
-        <a href="{% url 'pokemon_letter:next_pokemon' pokemon.id %}"> {{letters.5}} </a>
-    {% else %}
-        <p %}"> {{letters.5}} </p>
-    {% endif %}
-</td>
-</tr>
-</tbody>
-</table>
-
-
-
-
+    </div>
+{% endfor %}
+</div>
